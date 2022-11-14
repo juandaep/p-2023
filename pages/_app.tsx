@@ -4,7 +4,7 @@ import { Epilogue } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "../components/Navbar";
 
-const epilogue = Epilogue();
+const epilogue = Epilogue({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
