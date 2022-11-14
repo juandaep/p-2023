@@ -12,7 +12,7 @@ export const ThemeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="p-2 bg-transparent rounded-lg flex items-center justify-center hover:ring-4 hover:ring-slate-300 transition-all"
+      className="p-2 bg-transparent rounded-lg flex items-center justify-center h-fit hover:ring-4 hover:ring-slate-300 transition-all"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {mounted && (
