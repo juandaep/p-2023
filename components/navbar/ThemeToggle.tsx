@@ -40,7 +40,7 @@ export const ThemeToggle = () => {
               />
             )}
           </svg>
-          <span className="md:hidden">
+          <span className="md:hidden text-slate-600 dark:text-white">
             Switch to {resolvedTheme === "dark" ? "light" : "dark"} mode
           </span>
         </>

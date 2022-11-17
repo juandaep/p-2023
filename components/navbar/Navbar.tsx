@@ -78,7 +78,7 @@ export const Navbar = (): JSX.Element => {
         <div
           className={
             showMobileNav
-              ? "flex flex-col md:flex-row md:items-center gap-2 p-2 mt-3 md:mt-0 transition-all"
+              ? "flex flex-col md:flex-row items-center gap-2 p-2 mt-3 md:mt-0 transition-all"
               : "hidden md:flex items-center"
           }
         >
