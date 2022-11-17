@@ -1,14 +1,21 @@
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
-import { Bars3Icon } from "@heroicons/react/24/solid";
-import { navLinks } from "./utils/constant";
+import { useEffect, useState } from "react";
+import { Logo } from "../Logo";
 import { ThemeToggle } from "./ThemeToggle";
-import { Logo } from "./Logo";
+import { navLinks } from "../utils/constant";
 
 type Props = {
   href: string;
   title: string;
+};
+
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30,
 };
 
 const NavItem = ({ href, title }: Props): JSX.Element => {
@@ -44,13 +51,10 @@ export const Navbar = (): JSX.Element => {
     };
   }, []);
 
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
   return (
     <div
-      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-12 transition-all ${
-        isScreenScrolled && "shadow-2xl md:shadow-xl backdrop-blur-xl p-0"
+      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-12 transition-all backdrop-blur-xl ${
+        isScreenScrolled && "shadow-2xl md:shadow-xl"
       }`}
     >
       <nav className="block md:flex justify-between items-center">
@@ -66,14 +70,21 @@ export const Navbar = (): JSX.Element => {
           <div className="md:hidden flex">
             <button
               type="button"
-              className="p-2 rounded-lg hover:ring-4 hover:ring-slate-300 text-slate-600 dark:text-white focus:outline-none"
+              className="p-2 rounded-lg hover:ring-4 hover:ring-slate-300 text-slate-600 dark:text-white focus:outline-none transition duration-300 rotate-180"
               onClick={() => setShowMobileNav(!showMobileNav)}
             >
-              <Bars3Icon className="w-6" />
+              {showMobileNav ? (
+                <XMarkIcon className="w-6" />
+              ) : (
+                <Bars3Icon className="w-6" />
+              )}
             </button>
           </div>
         </div>
-        <div
+        {/* Mobile nav */}
+        <motion.div
+          layout
+          transition={spring}
           className={
             showMobileNav
               ? "block pt-3 transition-all"
@@ -88,7 +99,7 @@ export const Navbar = (): JSX.Element => {
             })}
           </ul>
           <ThemeToggle />
-        </div>
+        </motion.div>
       </nav>
     </div>
   );
