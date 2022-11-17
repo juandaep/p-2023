@@ -12,7 +12,7 @@ export const ThemeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="p-2 bg-transparent rounded-lg flex gap-2 items-center justify-center h-fit hover:ring-4 hover:ring-slate-300 transition-color"
+      className="p-2 bg-transparent rounded-lg flex gap-2 items-center justify-center hover:ring-4 hover:ring-slate-300 transition-color"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {mounted && (
@@ -22,7 +22,7 @@ export const ThemeToggle = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            className="w-6 h-6 text-slate-800 dark:text-slate-200"
+            className="w-6 h-6 text-slate-600 dark:text-slate-200"
           >
             {resolvedTheme === "dark" ? (
               <path
