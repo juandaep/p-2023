@@ -5,7 +5,7 @@ type LogoProps = {
   height?: number;
 } & ComponentPropsWithoutRef<"svg">;
 
-export const Logo = ({ width = 60, height = 60, ...props }: LogoProps) => (
+export const Logo = ({ width = 48, height = 48, ...props }: LogoProps) => (
   <svg
     width={width}
     height={height}

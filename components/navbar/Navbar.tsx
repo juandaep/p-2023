@@ -1,21 +1,14 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Logo } from "../Logo";
-import { ThemeToggle } from "./ThemeToggle";
 import { navLinks } from "../utils/constant";
+import { ThemeToggle } from "./ThemeToggle";
 
 type Props = {
   href: string;
   title: string;
-};
-
-const spring = {
-  type: "spring",
-  stiffness: 700,
-  damping: 30,
 };
 
 const NavItem = ({ href, title }: Props): JSX.Element => {
@@ -53,12 +46,12 @@ export const Navbar = (): JSX.Element => {
 
   return (
     <div
-      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-12 transition-all backdrop-blur-xl ${
-        isScreenScrolled && "shadow-2xl md:shadow-xl"
+      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-4 md:px-24 transition-all backdrop-blur-xl ${
+        isScreenScrolled && "shadow-2xl md:shadow-xl p-0"
       }`}
     >
       <nav className="block md:flex justify-between items-center">
-        <div className="flex justify-between items-center p-2">
+        <div className="flex justify-between items-center">
           <Link href="/">
             <Logo
               className={`${
@@ -82,16 +75,14 @@ export const Navbar = (): JSX.Element => {
           </div>
         </div>
         {/* Mobile nav */}
-        <motion.div
-          layout
-          transition={spring}
+        <div
           className={
             showMobileNav
-              ? "block pt-3 transition-all"
+              ? "flex flex-col md:flex-row md:items-center gap-2 p-2 mt-3 transition-all"
               : "hidden md:flex items-center"
           }
         >
-          <ul className="md:flex md:flex-row">
+          <ul className="flex flex-col gap-2 md:flex md:flex-row">
             {navLinks.map((item) => {
               return (
                 <NavItem title={item.title} href={item.href} key={item.href} />
@@ -99,7 +90,7 @@ export const Navbar = (): JSX.Element => {
             })}
           </ul>
           <ThemeToggle />
-        </motion.div>
+        </div>
       </nav>
     </div>
   );
