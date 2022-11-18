@@ -16,7 +16,7 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
   return (
     <Link href={href}>
       <li
-        className={`md:p-4 md:text-center ${
+        className={`p-2 md:p-4 text-center ${
           router.asPath === href ? "border-b-2 md:border-none" : ""
         }`}
       >
@@ -46,8 +46,8 @@ export const Navbar = (): JSX.Element => {
 
   return (
     <div
-      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-4 md:px-24 transition-all backdrop-blur-xl ${
-        isScreenScrolled && "shadow-2xl md:shadow-xl p-0"
+      className={`mx-auto bg-transparent w-full fixed z-30 p-2 px-4 md:px-24 transition-all backdrop-blur ${
+        isScreenScrolled && "shadow-sm md:shadow-sm p-0"
       }`}
     >
       <nav className="block md:flex justify-between items-center">
@@ -55,7 +55,7 @@ export const Navbar = (): JSX.Element => {
           <Link href="/">
             <Logo
               className={`${
-                isScreenScrolled ? "w-10 md:w-10/12" : "w-full"
+                isScreenScrolled ? "w-8 md:w-9/12" : "w-full"
               } my-2 transition-all transform hover:scale-75`}
             />
           </Link>
@@ -78,7 +78,7 @@ export const Navbar = (): JSX.Element => {
         <div
           className={
             showMobileNav
-              ? "flex flex-col md:flex-row items-center gap-2 p-2 mt-3 md:mt-0 transition-all"
+              ? "flex flex-col md:flex-row items-center gap-2 my-3 md:mt-0 transition-all"
               : "hidden md:flex items-center"
           }
         >
