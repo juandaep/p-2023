@@ -14,15 +14,13 @@ type Props = {
 const NavItem = ({ href, title }: Props): JSX.Element => {
   const router = useRouter();
   return (
-    <Link href={href}>
+    <Link href={href} className="p-2 md:p-4 text-center">
       <li
-        className={`p-2 md:p-4 text-center ${
+        className={`md:hover-animation ${
           router.asPath === href ? "border-b-2 md:border-none" : ""
         }`}
       >
-        <p className="transition duration-500 ease-in-out transform md:hover:translate-y-2 text-slate-600 dark:text-white font-medium md:hover:text-slate-700 md:dark:hover:text-slate-200">
-          {title}
-        </p>
+        {title}
       </li>
     </Link>
   );
@@ -63,7 +61,7 @@ export const Navbar = (): JSX.Element => {
           <div className="md:hidden flex">
             <button
               type="button"
-              className="p-2 rounded-lg hover:ring-4 hover:ring-slate-300 text-slate-600 dark:text-white focus:outline-none transition duration-300 rotate-180"
+              className="p-2 rounded-lg hover:ring-4 hover:ring-slate-300 text-slate-600 dark:text-white focus:outline-none"
               onClick={() => setShowMobileNav(!showMobileNav)}
             >
               {showMobileNav ? (
@@ -78,7 +76,7 @@ export const Navbar = (): JSX.Element => {
         <div
           className={
             showMobileNav
-              ? "flex flex-col md:flex-row items-center gap-2 my-3 md:mt-0 transition-all"
+              ? "flex flex-col md:flex-row items-center gap-2 my-3 md:mt-0"
               : "hidden md:flex items-center"
           }
         >

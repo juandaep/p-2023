@@ -12,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+
         <h1 className="mt-96 text-3xl font-bold underline">Hello world!</h1>
+        <p className="hover-animation">Hover this text to see the effect!</p>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>

@@ -5,7 +5,24 @@
 @layer base {
   html,
   body {
-    @apply bg-white dark:bg-slate-900 scroll-smooth
+    @apply bg-white dark:bg-neutral-900 scroll-smooth;
+  }
+}
+
+@layer components {
+  .hover-animation {
+    @apply inline-block relative text-slate-600 dark:text-slate-200;
+  }
+
+  .hover-animation::after {
+    @apply absolute w-full h-[3px] bottom-0 left-0 bg-emerald-500 origin-bottom-right transition transform duration-500 ease-out;
+    content: "";
+    transform: scaleX(0);
+  }
+
+  .hover-animation:hover::after {
+    @apply origin-bottom-left;
+    transform: scaleX(1);
   }
 }
 
