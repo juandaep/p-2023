@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
-    @apply bg-white dark:bg-gray-900 scroll-smooth;
-  }
-}
 
 @layer components {
   .hover-animation {
@@ -24,9 +18,31 @@
     @apply origin-bottom-left;
     transform: scaleX(1);
   }
-}
+  }
 
 /**
+  .background::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    left: 60%;
+    top: 138px;
+    filter: blur(100px);
+    background-color: #FB37FF;
+  }
+
+  .background::after {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 80%;
+    top: 550px;
+    background-color: #18B2DE;
+    filter: blur(80px);
+    }
+
 ::-webkit-scrollbar {
   width: 4px;
 }
