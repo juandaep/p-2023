@@ -1,9 +1,10 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   //Ater mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
@@ -12,39 +13,25 @@ export const ThemeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="p-2 bg-transparent rounded-lg flex gap-2 items-center justify-center hover:ring-4 hover:ring-slate-300 transition-color"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      className="ml-1 mr-1 h-7 w-7 rounded p-1 sm:ml-4"
+      onClick={() =>
+        setTheme(
+          theme === "dark" || resolvedTheme === "dark" ? "light" : "dark"
+        )
+      }
     >
-      {mounted && (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            className="w-6 h-6 text-slate-600 dark:text-slate-200"
-          >
-            {resolvedTheme === "dark" ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            )}
-          </svg>
-          <span className="md:hidden text-slate-600 dark:text-white">
-            Switch to {resolvedTheme === "dark" ? "light" : "dark"} mode
-          </span>
-        </>
-      )}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="text-gray-900 dark:text-gray-100"
+      >
+        {mounted && (theme === "dark" || resolvedTheme === "dark") ? (
+          <SunIcon className="fade-in text-xl" />
+        ) : (
+          <MoonIcon className="fade-in text-xl" />
+        )}
+      </svg>
     </button>
   );
 };

@@ -1,0 +1,17 @@
+const siteMetadata = {
+    title: 'Juanda Esa Putra',
+    author: 'Juanda Esa Putra',
+    headerTitle: 'Juanda Esa Putra',
+    description: 'lorem ipsum',
+    language: 'en-us',
+    theme: 'sistem',
+    siteUrl: 'juanda-ep.vercel.app',
+    siteRepo: '',
+    siteLogo: '',
+    image: '',
+    socialBanner: '',
+    email: 'juandaesaputra@gmail.com',
+    github: 'https://github.com/juandaep',
+    linkedin: 'https://www.linkedin.com/in/juanda-esa-putra/',
+    locale: 'en-US',
+}
