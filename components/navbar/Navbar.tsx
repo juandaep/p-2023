@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-8">
       <Logo />
-      <div className="flex items-center gap-3 text-base leading-5">
+      <div className="flex items-center gap-3 md:gap-10 text-base font-medium leading-5">
         <div className="hidden md:flex md:space-x-12">
           {navLinks.map((link) => (
             <Link
