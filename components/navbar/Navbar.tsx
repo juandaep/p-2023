@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-8">
       <Logo />
-      <div className="flex items-center gap-3 md:gap-10 text-base font-medium leading-5">
+      <div className="flex items-center gap-3 md:gap-8 text-base font-medium leading-5">
         <div className="hidden md:flex md:space-x-12">
           {navLinks.map((link) => (
             <Link
               key={link.title}
               href={link.href}
-              className="hover-animation text-lg py-1 text-gray-900 dark:text-gray-100"
+              className="hover-animation text-lg py-1 text-neutral-600 dark:text-neutral-100"
             >
               {link.title}
             </Link>
