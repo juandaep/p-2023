@@ -21,20 +21,20 @@ const MobileNav = () => {
     <div className="md:hidden flex justify-center">
       <button
         type="button"
-        className="h-9 w-9 rounded-lg focus:ring-4 focus:ring-gray-300 focus:dark:ring-gray-600 transition-colors"
+        className="h-9 w-9 rounded-lg focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600 transition-colors"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
         <svg
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="text-gray-600 dark:text-gray-100"
+          className="text-neutral-600 dark:text-neutral-100"
         >
           {navShow ? <XMarkIcon /> : <Bars3BottomRightIcon />}
         </svg>
       </button>
       <div
-        className={`fixed top-24 right-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-900 ${
+        className={`fixed top-24 right-0 z-10 h-full w-full transform bg-white duration-300 ease-in-out dark:bg-[#121212] ${
           navShow ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -49,7 +49,7 @@ const MobileNav = () => {
             <div key={link.title} className="px-12 py-4">
               <Link
                 href={link.href}
-                className="text-2xl font-bold tracking-widest text-gray-600 dark:text-gray-100"
+                className="text-2xl font-bold tracking-widest text-neutral-600 dark:text-neutral-100"
                 onClick={onToggleNav}
               >
                 {link.title}
