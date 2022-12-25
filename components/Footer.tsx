@@ -7,7 +7,12 @@ function Footer(): React.ReactElement {
   const year: number = new Date().getFullYear();
 
   return (
-    <div className={classNames('flex flex-col items-center py-6 border-t border-neutral-200', 'dark:border-neutral-700 dark:text-white')}>
+    <div
+      className={classNames(
+        "flex flex-col items-center py-6 border-t border-neutral-200",
+        "dark:border-neutral-700 dark:text-white"
+      )}
+    >
       <div className="flex flex-col items-center justify-center text-neutral-500">
         <div className="inline-flex items-center uppercase text-xs font-bold tracking-wide">
           Made with{" "}
@@ -46,7 +51,8 @@ function Footer(): React.ReactElement {
           </div>
         </div>
         <div className="mt-2 text-xs flex items-center ">
-          Made with <HeartIcon className="w-5 h-5 mx-1 fill-red-600 animate-pulse" />
+          Made with{" "}
+          <HeartIcon className="w-5 h-5 mx-1 fill-red-600 animate-pulse" />
           <a
             href="mailto:juandaesaputra@gmail.com"
             className="text-neutral-500 font-medium"

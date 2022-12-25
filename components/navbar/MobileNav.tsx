@@ -19,10 +19,13 @@ const MobileNav = () => {
   };
 
   return (
-    <div className={classNames('flex justify-center', 'md:hidden')}>
+    <div className={classNames("flex justify-center", "md:hidden")}>
       <button
         type="button"
-        className={classNames('h-9 w-9 rounded-lg transition-colors', 'focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600')}
+        className={classNames(
+          "h-9 w-9 rounded-lg transition-colors",
+          "focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600"
+        )}
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -42,7 +45,10 @@ const MobileNav = () => {
         <button
           type="button"
           aria-label="toggle modal"
-          className={classNames('fixed h-full w-full cursor-auto', 'focus:outline-none')}
+          className={classNames(
+            "fixed h-full w-full cursor-auto",
+            "focus:outline-none"
+          )}
           onClick={onToggleNav}
         ></button>
         <nav className="fixed mt-8 h-full">
@@ -50,7 +56,10 @@ const MobileNav = () => {
             <div key={link.title} className="px-12 py-4">
               <Link
                 href={link.href}
-                className={classNames('text-2xl font-bold tracking-widest text-neutral-600', 'dark:text-neutral-100')}
+                className={classNames(
+                  "text-2xl font-bold tracking-widest text-neutral-600",
+                  "dark:text-neutral-100"
+                )}
                 onClick={onToggleNav}
               >
                 {link.title}

@@ -6,5 +6,9 @@ interface Props {
 }
 
 export default function SectionContainer({ children }: Props) {
-  return <div className={classNames('mx-auto max-w-7xl px-4', 'md:px-6')}>{children}</div>;
+  return (
+    <div className={classNames("mx-auto max-w-7xl px-4", "md:px-6")}>
+      {children}
+    </div>
+  );
 }
