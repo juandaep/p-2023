@@ -1,14 +1,15 @@
 import { HeartIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { memo } from "react";
+import { classNames } from "utils/classnames";
 
 function Footer(): React.ReactElement {
   const year: number = new Date().getFullYear();
 
   return (
-    <div className="flex flex-col items-center py-6 border-t border-gray-200 dark:border-neutral-700 dark:text-white">
+    <div className={classNames('flex flex-col items-center py-6 border-t border-neutral-200', 'dark:border-neutral-700 dark:text-white')}>
       <div className="flex flex-col items-center justify-center text-neutral-500">
-        <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
+        <div className="inline-flex items-center uppercase text-xs font-bold tracking-wide">
           Made with{" "}
           <div className="space-x-2 inline-flex items-center -mt-1 ml-3">
             <span>

@@ -1,6 +1,7 @@
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useState } from "react";
+import { classNames } from "utils/classnames";
 import navLinks from "./navLinks";
 
 const MobileNav = () => {
@@ -18,10 +19,10 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="md:hidden flex justify-center">
+    <div className={classNames('flex justify-center', 'md:hidden')}>
       <button
         type="button"
-        className="h-9 w-9 rounded-lg focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600 transition-colors"
+        className={classNames('h-9 w-9 rounded-lg transition-colors', 'focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600')}
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -41,7 +42,7 @@ const MobileNav = () => {
         <button
           type="button"
           aria-label="toggle modal"
-          className="fixed h-full w-full cursor-auto focus:outline-none"
+          className={classNames('fixed h-full w-full cursor-auto', 'focus:outline-none')}
           onClick={onToggleNav}
         ></button>
         <nav className="fixed mt-8 h-full">
@@ -49,7 +50,7 @@ const MobileNav = () => {
             <div key={link.title} className="px-12 py-4">
               <Link
                 href={link.href}
-                className="text-2xl font-bold tracking-widest text-neutral-600 dark:text-neutral-100"
+                className={classNames('text-2xl font-bold tracking-widest text-neutral-600', 'dark:text-neutral-100')}
                 onClick={onToggleNav}
               >
                 {link.title}

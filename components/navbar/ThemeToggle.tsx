@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import { classNames } from "utils/classnames";
 
 export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -13,7 +14,7 @@ export const ThemeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="ml-1 mr-1 h-9 w-9 rounded-lg p-1 md:ml-4 focus:ring-4 focus:ring-gray-300 focus:dark:ring-gray-600 transition-colors"
+      className={classNames('ml-1 mr-1 h-9 w-9 rounded-lg p-1 transition-colors', 'focus:ring-4 focus:ring-gray-300 focus:dark:ring-gray-600', 'md:ml-4')}
       onClick={() =>
         setTheme(
           theme === "dark" || resolvedTheme === "dark" ? "light" : "dark"

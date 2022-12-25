@@ -1,15 +1,16 @@
+import { classNames } from "utils/classnames"
+
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col justify-center px-6 py-10 dark:text-neutral-100 md:px-10">
-      <h1 className="flex text-3xl font-medium text-neutral-900 dark:text-neutral-100 md:text-5xl">
-        Hi <span className="animate-waving-hand">👋</span>, I am Juanda Esa
-        Putra
+    <div className={classNames('flex flex-1 flex-col justify-center px-6 py-10', 'md:px-10')}>
+      <h1 className={classNames('flex text-2xl font-medium text-neutral-900', 'md:text-4xl', 'dark:text-neutral-100')}>
+        Hello <span className="animate-waving-hand">👋</span>, I am
       </h1>
-      <p className="my-2 text-lg md:my-4 md:text-xl text-neutral-600 dark:text-neutral-400">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
-        aut officiis iusto recusandae dignissimos quod cumque ipsam nisi
-        aspernatur, necessitatibus iure voluptate qui reprehenderit dolor
-        officia saepe eius suscipit architecto.
+      <h1 className={classNames('text-3xl font-semibold text-emerald-600', 'md:text-5xl md:leading-relaxed', 'dark:text-emerald-500')}>
+        Juanda Esa Putra
+      </h1>
+      <p className={classNames('my-2 text-lg text-neutral-600', 'md:text-xl', 'dark:text-neutral-400')}>
+        UI/UX Designer
       </p>
     </div>
   );
