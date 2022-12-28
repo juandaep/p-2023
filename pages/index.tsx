@@ -29,7 +29,7 @@ export default function Home() {
       <p
         className="text-xl text-neutral-400"
       >
-        UI/UX Designer
+        An UI/UX Designer who love audio engineering
       </p>
     </div>
   );

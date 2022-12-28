@@ -16,7 +16,7 @@ export const ThemeToggle = () => {
       type="button"
       className={classNames(
         "h-9 w-9 rounded-lg p-1",
-        "focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600",
+        "focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600 focus:outline-none",
       )}
       onClick={() =>
         setTheme(
