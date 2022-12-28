@@ -13,9 +13,9 @@ const epilogue = Epilogue({ subsets: ["latin"] });
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
+      <div className={`${epilogue.className} flex h-screen flex-col justify-between`}>
         <Navbar />
-        <main className={`${epilogue.className} mb-auto`}>{children}</main>
+        <main className='mb-auto'>{children}</main>
         <Footer />
       </div>
     </SectionContainer>

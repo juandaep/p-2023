@@ -15,9 +15,8 @@ export const ThemeToggle = () => {
       aria-label="Toggle Dark Mode"
       type="button"
       className={classNames(
-        "ml-1 mr-1 h-9 w-9 rounded-lg p-1 transition-colors",
-        "focus:ring-4 focus:ring-gray-300 focus:dark:ring-gray-600",
-        "md:ml-4"
+        "h-9 w-9 rounded-lg p-1",
+        "focus:ring-4 focus:ring-neutral-300 focus:dark:ring-neutral-600",
       )}
       onClick={() =>
         setTheme(
@@ -29,12 +28,12 @@ export const ThemeToggle = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="text-gray-600 dark:text-gray-100"
+        className="text-[#121212] dark:text-amber-400"
       >
         {mounted && (theme === "dark" || resolvedTheme === "dark") ? (
-          <SunIcon className="fade-in text-xl" />
+          <SunIcon />
         ) : (
-          <MoonIcon className="fade-in text-xl" />
+          <MoonIcon />
         )}
       </svg>
     </button>
