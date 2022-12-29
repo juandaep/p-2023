@@ -36,7 +36,7 @@ const About = () => {
           About
         </h1>
       </div>
-      <div className="flex flex-col">
+      <div className={classNames("flex flex-col justify-between", "md:h-full")}>
         <div
           className={classNames(
             "items-start py-8 space-y-6",
@@ -74,7 +74,7 @@ const About = () => {
           <div className={classNames("flex flex-col gap-8")}>
             <div
               className={classNames(
-                "flex flex-col gap-2 text-neutral-600 tracking-wide text-justify",
+                "flex flex-col gap-4 text-neutral-600 tracking-wide text-justify",
                 "dark:text-neutral-300"
               )}
             >
