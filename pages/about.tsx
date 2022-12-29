@@ -1,5 +1,13 @@
 import { ProfileImgDark, ProfileImgLight } from "@/components/ProfileImg";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  SoundcloudIcon,
+} from "@/components/SocialIcon";
+import SocialIcons from "@/components/SocialIcons";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { classNames } from "utils/classnames";
 
@@ -13,28 +21,29 @@ const About = () => {
     <>
       <div
         className={classNames(
-          "fade-in divide-y-2 divide-neutral-200",
-          "dark:divide-neutral-800"
+          "pt-4 pb-6 border-b border-neutral-300",
+          "md:pt-6 pb-6",
+          "dark:border-neutral-700"
         )}
       >
-        <div className={classNames("space-y-2 pt-6 pb-8", "md:space-y-5")}>
-          <h1
-            className={classNames(
-              "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
-              "sm:text-4xl sm:leading-10 md:text-6xl md:leading-14",
-              "dark:text-neutral-100"
-            )}
-          >
-            About
-          </h1>
-        </div>
+        <h1
+          className={classNames(
+            "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
+            "md:text-6xl md:leading-14",
+            "dark:text-white"
+          )}
+        >
+          About
+        </h1>
+      </div>
+      <div className="flex flex-col">
         <div
           className={classNames(
             "items-start py-8 space-y-6",
-            "xl:grid xl:grid-cols-2 xl:gap-x-8 xl:space-y-0"
+            "md:grid md:grid-cols-2 md:gap-x-8 md:space-y-0"
           )}
         >
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-6">
             <div className="w-52 h-52">
               {mounted && (theme === "dark" || resolvedTheme === "dark") ? (
                 <ProfileImgDark />
@@ -45,7 +54,7 @@ const About = () => {
             <div className="flex flex-col gap-1 items-center">
               <h1
                 className={classNames(
-                  "text-3xl font-medium text-neutral-900",
+                  "text-3xl text-neutral-900",
                   "md:text-4xl",
                   "dark:text-white"
                 )}
@@ -54,37 +63,55 @@ const About = () => {
               </h1>
               <h2
                 className={classNames(
-                  "text-xl text-neutral-700",
-                  "md:text-2xl",
-                  "dark:text-neutral-400"
+                  "text-xl text-neutral-400",
+                  "md:text-2xl"
                 )}
               >
                 UI/UX Designer
               </h2>
             </div>
           </div>
-          <div
-            className={classNames(
-              "flex flex-col gap-3 text-neutral-600 tracking-wide",
-              "dark:text-neutral-300"
-            )}
-          >
-            <p>
-              Over 2-years experience who focused on turning a complex problem
-              into simple, interactive, usable, accessible, and intuitive
-              design.
-            </p>
-            <p>
-              Aiming to learn and explore new possibilities in digital product.
-              I work closely with the team and stackholder as well users to
-              ensure that all the requirements are fulfilled.
-            </p>
-            <p>
-              I also learn Front-end tech stack such as React, TailwindCSS, and
-              some CSS framework.
-            </p>
+          <div className={classNames("flex flex-col gap-8")}>
+            <div
+              className={classNames(
+                "flex flex-col gap-2 text-neutral-600 tracking-wide text-justify",
+                "dark:text-neutral-300"
+              )}
+            >
+              <p>
+                Over 2-years experience who focused on turning a complex problem
+                into simple, interactive, usable, accessible, and intuitive
+                design.
+              </p>
+              <p>
+                Aiming to learn and explore new possibilities in digital
+                product. I work closely with the team and stackholder as well
+                users to ensure that all the requirements are fulfilled.
+              </p>
+              <p>
+                I also learn Front-end tech stack such as React, TailwindCSS,
+                and some CSS framework.
+              </p>
+            </div>
+            <a
+              type="button"
+              className={classNames(
+                "flex justify-center items-center gap-2 px-4 py-[10px] bg-emerald-600 text-white font-medium rounded-full shadow-md transition-all",
+                "md:w-fit",
+                "hover:bg-emerald-700 hover:shadow-none  focus:ring-4 focus:ring-emerald-200 focus:outline-none"
+              )}
+              href="../public/juanda-cv.pdf"
+              target="_blank" 
+              rel="noreferrer"
+            >
+              <span>
+                <ArrowDownTrayIcon className="h-5 w-5" stroke="2" />
+              </span>
+              Download CV
+            </a>
           </div>
         </div>
+        <SocialIcons />
       </div>
     </>
   );
