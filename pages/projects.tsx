@@ -1,9 +1,16 @@
+import { SEOPage } from "@/components/SEO";
+import siteMetadata from "@/data/siteMetadata";
+import Head from "next/head";
 import React from "react";
 import { classNames } from "utils/classnames";
 
 const projects = () => {
   return (
     <>
+      <SEOPage
+        title={`Projects - ${siteMetadata.author}`}
+        description={siteMetadata.description}
+      />
       <div
         className={classNames(
           "fade-in divide-y-2 divide-neutral-200",

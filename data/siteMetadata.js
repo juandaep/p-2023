@@ -2,7 +2,7 @@ const siteMetadata = {
     title: 'Juanda Esa Putra',
     author: 'Juanda Esa Putra',
     headerTitle: 'Juanda Esa Putra',
-    description: 'lorem ipsum',
+    description: 'An UI/UX Designer who love audio engineering',
     language: 'en-us',
     theme: 'sistem',
     siteUrl: 'juanda-ep.vercel.app',
@@ -14,3 +14,5 @@ const siteMetadata = {
     linkedin: 'https://www.linkedin.com/in/juanda-esa-putra/',
     locale: 'en-US',
 }
+
+export default siteMetadata;

@@ -20,7 +20,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
-          <title>Juanda Esa Putra</title>
           <link
             rel="apple-touch-icon"
             sizes="76x76"

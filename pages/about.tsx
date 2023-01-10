@@ -1,13 +1,9 @@
 import { ProfileImgDark, ProfileImgLight } from "@/components/ProfileImg";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  SoundcloudIcon,
-} from "@/components/SocialIcon";
+import { SEOPage } from "@/components/SEO";
 import SocialIcons from "@/components/SocialIcons";
+import siteMetadata from "@/data/siteMetadata";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { classNames } from "utils/classnames";
 
@@ -19,6 +15,10 @@ const About = () => {
 
   return (
     <>
+      <SEOPage
+        title={`About - ${siteMetadata.author}`}
+        description={siteMetadata.description}
+      />
       <div
         className={classNames(
           "pt-4 pb-6 border-b border-neutral-300",
@@ -100,8 +100,9 @@ const About = () => {
                 "md:w-fit",
                 "hover:bg-emerald-700 hover:shadow-none  focus:ring-4 focus:ring-emerald-200 focus:outline-none"
               )}
-              href="../public/juanda-cv.pdf"
-              target="_blank" 
+              href="juanda-cv.pdf"
+              download="juanda-cv.pdf"
+              target="_blank"
               rel="noreferrer"
             >
               <span>
@@ -115,6 +116,6 @@ const About = () => {
       </div>
     </>
   );
-};
+}
 
 export default About;

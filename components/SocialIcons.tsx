@@ -39,7 +39,7 @@ const SocialIcons = () => {
           width="26"
           height="24"
           viewBox="0 0 26 24"
-          className={classNames("fill-neutral-400 transition-all", "hover:fill-white")}
+          className={classNames("fill-neutral-400 transition-all", "hover:fill-black dark:hover:fill-white")}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
