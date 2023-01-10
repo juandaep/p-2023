@@ -39,7 +39,7 @@ class MyDocument extends Document {
           />
           <meta
             name="description"
-            content="Juanda Esa Putra website portfolio"
+            content="Juanda Esa Putra website"
           />
         </Head>
         <body className="bg-white dark:bg-[#121212] antialiased">

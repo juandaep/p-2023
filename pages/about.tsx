@@ -2,7 +2,6 @@ import { ProfileImgDark, ProfileImgLight } from "@/components/ProfileImg";
 import { SEOPage } from "@/components/SEO";
 import SocialIcons from "@/components/SocialIcons";
 import siteMetadata from "@/data/siteMetadata";
-import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { classNames } from "utils/classnames";
@@ -93,7 +92,7 @@ const About = () => {
                 and some CSS framework.
               </p>
             </div>
-            <a
+            {/* <a
               type="button"
               className={classNames(
                 "flex justify-center items-center gap-2 px-4 py-[10px] bg-emerald-600 text-white font-medium rounded-full shadow-md transition-all",
@@ -109,7 +108,7 @@ const About = () => {
                 <ArrowDownTrayIcon className="h-5 w-5" stroke="2" />
               </span>
               Download CV
-            </a>
+            </a> */}
           </div>
         </div>
         <SocialIcons />

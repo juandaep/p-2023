@@ -3,7 +3,7 @@ import siteMetadata from "@/data/siteMetadata";
 import Head from "next/head";
 import { classNames } from "utils/classnames";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <SEOPage
@@ -40,4 +40,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

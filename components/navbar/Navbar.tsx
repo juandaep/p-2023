@@ -3,7 +3,7 @@ import { classNames } from "utils/classnames";
 import { Logo } from "../Logo";
 import MobileNav from "./MobileNav";
 import navLinks from "./navLinks";
-import { ThemeToggle } from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   return (

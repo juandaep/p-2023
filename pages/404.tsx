@@ -1,6 +1,6 @@
 import { classNames } from "utils/classnames";
 
-export default function Custom404() {
+const Custom404 = () => {
   return (
     <div className="h-screen flex items-center justify-center">
       <div
@@ -20,4 +20,6 @@ export default function Custom404() {
       </div>
     </div>
   );
-}
+};
+
+export default Custom404;
