@@ -2,12 +2,6 @@ import { SEOPage } from "@/components/SEO";
 import siteMetadata from "@/data/siteMetadata";
 import { classNames } from "utils/classnames";
 
-type TabsType = {
-  label: string;
-  index: number;
-  Component: React.FC<{}>;
-}[];
-
 const projects = () => {
   return (
     <>
