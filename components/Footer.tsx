@@ -67,7 +67,7 @@ function Footer(): React.ReactElement {
             href="mailto:juandaesaputra@gmail.com"
             className={classNames("text-neutral-500 font-medium transition-all", "hover:text-neutral-700", "dark:hover:text-neutral-300")}
           >
-            Juanda Esa Putra
+            Juanda Esa Putra.
           </a>
         </div>
       </div>
