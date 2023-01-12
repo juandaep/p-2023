@@ -8,7 +8,6 @@ interface TabsProps {
   }[];
   selectedTab: number;
   onClick: (index: number) => void;
-  orientation?: "horizontal" | "vertical";
   className?: string;
 }
 
@@ -18,27 +17,26 @@ interface TabsProps {
  * @param tab Array of object
  * @param selectedTab number
  * @param onClick Function to set the active tab
- * @param orientation Tab orientation Vertical | Horizontal
  */
 
 const Tabs: FC<TabsProps> = ({
-  className = "tabs-component",
+  className = "flex flex-wrap rela",
   tabs = [],
   selectedTab = 0,
   onClick,
-  orientation = "horizontal",
 }) => {
   const Panel = tabs && tabs.find((tab) => tab.index === selectedTab);
   return (
-    <div
-      className={
-        orientation === "vertical" ? className + "vertical" : className
-      }
-    >
-      <div role="tablist" aria-orientation={orientation}>
+    <>
+      <div role="tablist"
+      className="flex items-start gap-2">
         {tabs.map((tab) => (
           <button
-            className={selectedTab === tab.index ? "active" : ""}
+            className={
+              selectedTab === tab.index
+                ? "tab-active"
+                : "tab-inactive"
+            }
             onClick={() => onClick(tab.index)}
             key={tab.index}
             type="button"
@@ -59,7 +57,7 @@ const Tabs: FC<TabsProps> = ({
       >
         {Panel && <Panel.Component index={selectedTab} />}
       </div>
-    </div>
+    </>
   );
 };
 

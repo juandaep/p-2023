@@ -21,17 +21,17 @@ type TabsType = {
 //Tabs Array
 const tabs: TabsType = [
   {
-    label: "Tab Coding",
+    label: "Design",
     index: 1,
-    Component: TabCoding,
-  },
-  {
-    label: "Tab Design",
-    index: 2,
     Component: TabDesign,
   },
   {
-    label: "Tab Mixing",
+    label: "Coding",
+    index: 2,
+    Component: TabCoding,
+  },
+  {
+    label: "Mixing",
     index: 3,
     Component: TabMixing,
   },
@@ -47,7 +47,7 @@ const projects = () => {
       />
       <div
         className={classNames(
-          "fade-in divide-y-2 divide-neutral-200",
+          "divide-y-2 divide-neutral-200",
           "dark:divide-neutral-800"
         )}
       >
@@ -62,18 +62,13 @@ const projects = () => {
             Projects
           </h1>
         </div>
-        <div className="flex min-h-max flex-col justify-center px-6 py-10 md:px-10 text-2xl text-emerald-600 dark:text-emerald-500">
-          Currently this page is on development 😊
-          <Button
-            bgColor="bg-emerald-600"
-            textColor="text-white"
-            onClick={() => console.log("you clicked on the pink")}
-            children="i'm a pink circle"
-            leftIcon={<ArrowDownCircleIcon className="w-5 h-5" />}
-            rightIcon={<ArrowDownTrayIcon className="w-5 h-5" />}
+        <div className={classNames("py-8 flex flex-col gap-8")}>
+          <Tabs
+            selectedTab={selectedTab}
+            onClick={setSelectedTab}
+            tabs={tabs}
           />
         </div>
-        <Tabs selectedTab={selectedTab} onClick={setSelectedTab} tabs={tabs} />
       </div>
     </>
   );
