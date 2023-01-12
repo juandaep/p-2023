@@ -14,13 +14,13 @@ function Footer(): React.ReactElement {
       )}
     >
       <div className="flex flex-col items-center">
-        <div className="inline-flex items-center gap-4 uppercase text-xs font-bold tracking-wide">
+        <div className="inline-flex items-center gap-4 uppercase text-xs font-bold tracking-wider">
           Powered by{" "}
           <div className="space-x-2 inline-flex items-center">
             <span>
               <Link href="https://reactjs.org/" target="_blank">
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/react.svg"
                   width="26"
                   title="React"
                 />
@@ -28,9 +28,19 @@ function Footer(): React.ReactElement {
               <span className="sr-only">React</span>
             </span>
             <span>
+              <Link href="https://www.typescriptlang.org/" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/typescript.svg"
+                  width="26"
+                  title="Typescript"
+                />
+              </Link>
+              <span className="sr-only">Typescript</span>
+            </span>
+            <span>
               <Link href="https://nextjs.org/" target="_blank">
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/nextjs.svg"
                   width="40"
                   className="dark:invert"
                   title="NextJS"
@@ -41,7 +51,7 @@ function Footer(): React.ReactElement {
             <span>
               <Link href="https://tailwindcss.com/" target="_blank">
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/tailwindcss.svg"
                   width="26"
                   title="TailwindCSS"
                 />
@@ -51,15 +61,14 @@ function Footer(): React.ReactElement {
           </div>
         </div>
         <div className="text-xs flex items-center ">
-          Made with{" "}
+        &copy; {year} Made with{" "}
           <HeartIcon className="w-5 h-5 mx-1 fill-red-600 animate-pulse" />
           <a
             href="mailto:juandaesaputra@gmail.com"
-            className="text-neutral-500 font-medium"
+            className={classNames("text-neutral-500 font-medium transition-all", "hover:text-neutral-700", "dark:hover:text-neutral-300")}
           >
             Juanda Esa Putra
           </a>
-          . All rights reserved.
         </div>
       </div>
     </div>
