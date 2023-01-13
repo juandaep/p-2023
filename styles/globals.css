@@ -19,7 +19,7 @@
   }
 
   .tab-active {
-    @apply py-[10px] px-3 font-medium bg-emerald-50 text-emerald-700 rounded-lg justify-center items-center flex-grow transition-all dark:bg-neutral-700 dark:text-emerald-400 md:w-32 md:flex-grow-0 outline-none
+    @apply py-[10px] px-3 font-medium bg-emerald-50 text-emerald-700 rounded-lg justify-center items-center flex-grow transition-all dark:bg-neutral-800 dark:text-emerald-400 md:w-32 md:flex-grow-0 outline-none
   }
 
   .tab-inactive {

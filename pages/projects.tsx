@@ -62,7 +62,7 @@ const projects = () => {
             Projects
           </h1>
         </div>
-        <div className={classNames("py-8 flex flex-col gap-8")}>
+        <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
           <Tabs
             selectedTab={selectedTab}
             onClick={setSelectedTab}
