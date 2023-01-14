@@ -1,7 +1,5 @@
 import {
-  ArrowRightOnRectangleIcon,
-  ArrowTopRightOnSquareIcon,
-  ArrowUpRightIcon,
+  ArrowTopRightOnSquareIcon
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { classNames } from "utils/classnames";

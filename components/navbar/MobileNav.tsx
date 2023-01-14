@@ -1,7 +1,7 @@
 import {
   ArrowTopRightOnSquareIcon,
   Bars3BottomRightIcon,
-  XMarkIcon,
+  XMarkIcon
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useState } from "react";

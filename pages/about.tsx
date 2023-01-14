@@ -63,7 +63,8 @@ const About = () => {
               <h2
                 className={classNames(
                   "text-xl text-neutral-500",
-                  "md:text-2xl", "dark:text-neutral-400"
+                  "md:text-2xl",
+                  "dark:text-neutral-400"
                 )}
               >
                 UI/UX Designer
@@ -115,6 +116,6 @@ const About = () => {
       </div>
     </>
   );
-}
+};
 
 export default About;

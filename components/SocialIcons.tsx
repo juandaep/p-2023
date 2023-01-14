@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { classNames } from "utils/classnames";
 
 const SocialIcons = () => {
@@ -11,7 +10,10 @@ const SocialIcons = () => {
           width="26"
           height="24"
           viewBox="0 0 26 24"
-          className={classNames("fill-neutral-400 transition-all", "hover:fill-black dark:hover:fill-white")}
+          className={classNames(
+            "fill-neutral-400 transition-all",
+            "hover:fill-black dark:hover:fill-white"
+          )}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -38,7 +40,10 @@ const SocialIcons = () => {
           height="24"
           viewBox="0 0 25 24"
           fill="none"
-          className={classNames("fill-neutral-400 transition-all", "hover:fill-[#0A66C2]")}
+          className={classNames(
+            "fill-neutral-400 transition-all",
+            "hover:fill-[#0A66C2]"
+          )}
           xmlns="http://www.w3.org/2000/svg"
         >
           <g clipPath="url(#clip0_729_4516)">
@@ -62,7 +67,10 @@ const SocialIcons = () => {
           width="36.05"
           height="20"
           viewBox="0 0 44 24"
-          className={classNames("fill-neutral-400 transition-all", "hover:fill-orange-500")}
+          className={classNames(
+            "fill-neutral-400 transition-all",
+            "hover:fill-orange-500"
+          )}
           xmlns="http://www.w3.org/2000/svg"
         >
           <g clipPath="url(#clip0_747_4409)">
@@ -81,7 +89,10 @@ const SocialIcons = () => {
           width="35"
           height="24"
           viewBox="0 0 35 24"
-          className={classNames("fill-neutral-400 transition-all", "hover:fill-[#FF0000]")}
+          className={classNames(
+            "fill-neutral-400 transition-all",
+            "hover:fill-[#FF0000]"
+          )}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M18.421 23.9686L11.3029 23.8384C8.99817 23.793 6.68774 23.8836 4.42824 23.4136C0.991009 22.7114 0.747504 19.2684 0.492701 16.3804C0.141609 12.3203 0.277528 8.18645 0.940083 4.16018C1.31412 1.90103 2.7861 0.552974 5.06246 0.406281C12.7469 -0.126093 20.4824 -0.0630013 28.1497 0.18537C28.9595 0.208139 29.7748 0.332586 30.5733 0.474239C34.5147 1.16513 34.6109 5.06677 34.8664 8.35122C35.1212 11.6696 35.0136 15.0049 34.5266 18.3007C34.1358 21.0295 33.3883 23.3178 30.2335 23.5387C26.2808 23.8276 22.4187 24.0602 18.4549 23.9861C18.4551 23.9686 18.4323 23.9686 18.421 23.9686ZM14.2362 17.06C17.2149 15.3498 20.1368 13.668 23.0985 11.9692C20.1142 10.2589 17.1979 8.57717 14.2362 6.87837V17.06Z" />

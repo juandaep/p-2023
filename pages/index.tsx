@@ -33,7 +33,12 @@ const Home = () => {
         >
           Juanda Esa Putra
         </h1>
-        <p className={classNames("text-xl text-neutral-500", "dark:text-neutral-400")}>
+        <p
+          className={classNames(
+            "text-xl text-neutral-500",
+            "dark:text-neutral-400"
+          )}
+        >
           An UI/UX Designer who love audio engineering
         </p>
       </div>

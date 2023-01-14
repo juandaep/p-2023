@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import { classNames } from "utils/classnames";
 
 interface TabsProps {
   tabs: {
@@ -19,23 +20,15 @@ interface TabsProps {
  * @param onClick Function to set the active tab
  */
 
-const Tabs: FC<TabsProps> = ({
-  className = "flex flex-wrap rela",
-  tabs = [],
-  selectedTab = 0,
-  onClick,
-}) => {
+const Tabs: FC<TabsProps> = ({ tabs = [], selectedTab = 0, onClick }) => {
   const Panel = tabs && tabs.find((tab) => tab.index === selectedTab);
   return (
     <>
-      <div role="tablist"
-      className="flex items-start gap-2">
+      <div role="tablist" className="flex items-start gap-2">
         {tabs.map((tab) => (
           <button
             className={
-              selectedTab === tab.index
-                ? "tab-active"
-                : "tab-inactive"
+              selectedTab === tab.index ? "tab-active" : "tab-inactive"
             }
             onClick={() => onClick(tab.index)}
             key={tab.index}
@@ -54,6 +47,10 @@ const Tabs: FC<TabsProps> = ({
         role="tabpanel"
         aria-labelledby={`btn-${selectedTab}`}
         id={`tabpanel-${selectedTab}`}
+        className={classNames(
+          "flex flex-col gap-8",
+          "md:grid md:grid-cols-3 md:gap-8"
+        )}
       >
         {Panel && <Panel.Component index={selectedTab} />}
       </div>

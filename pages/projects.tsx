@@ -1,14 +1,9 @@
-import Button from "@/components/Buttons";
 import { SEOPage } from "@/components/SEO";
 import TabCoding from "@/components/Tabs/TabCoding";
 import TabDesign from "@/components/Tabs/TabDesign";
 import TabMixing from "@/components/Tabs/TabMixing";
 import Tabs from "@/components/Tabs/Tabs";
 import siteMetadata from "@/data/siteMetadata";
-import {
-  ArrowDownCircleIcon,
-  ArrowDownTrayIcon,
-} from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { classNames } from "utils/classnames";
 

@@ -1,7 +1,7 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
 import LayoutWrapper from "@/components/Layout/LayoutWrapper";
+import { ThemeProvider } from "next-themes";
+import type { AppProps } from "next/app";
+import "../styles/globals.css";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,4 +13,4 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export default App
+export default App;

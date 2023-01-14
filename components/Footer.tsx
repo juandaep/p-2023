@@ -61,11 +61,15 @@ function Footer(): React.ReactElement {
           </div>
         </div>
         <div className="text-xs flex items-center ">
-        &copy; {year} Made with{" "}
+          &copy; {year} Made with{" "}
           <HeartIcon className="w-5 h-5 mx-1 fill-red-600 animate-pulse" />
           <a
             href="mailto:juandaesaputra@gmail.com"
-            className={classNames("text-neutral-500 font-medium transition-all", "hover:text-neutral-700", "dark:hover:text-neutral-300")}
+            className={classNames(
+              "text-neutral-500 font-medium transition-all",
+              "hover:text-neutral-700",
+              "dark:hover:text-neutral-300"
+            )}
           >
             Juanda Esa Putra.
           </a>
