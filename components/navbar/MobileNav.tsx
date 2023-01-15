@@ -42,7 +42,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-24 right-0 z-10 h-full w-full transform bg-white duration-300 ease-in-out dark:bg-[#121212] ${
+        className={`fixed top-20 right-0 z-10 h-full w-full transform bg-white duration-300 ease-in-out dark:bg-[#121212] ${
           navShow ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -55,7 +55,7 @@ const MobileNav = () => {
           )}
           onClick={onToggleNav}
         ></button>
-        <nav className="fixed w-full h-full">
+        <nav className="fixed mt-8 w-full h-full">
           {navLinks.map((link) => (
             <div
               key={link.title}
