@@ -9,7 +9,7 @@ function Footer(): React.ReactElement {
   return (
     <div
       className={classNames(
-        "flex flex-col items-center justify-center py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
+        "flex flex-col items-center justify-center star py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
         "dark:border-neutral-700"
       )}
     >
@@ -28,16 +28,6 @@ function Footer(): React.ReactElement {
               <span className="sr-only">React</span>
             </span>
             <span>
-              <Link href="https://www.typescriptlang.org/" target="_blank">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/typescript.svg"
-                  width="26"
-                  title="Typescript"
-                />
-              </Link>
-              <span className="sr-only">Typescript</span>
-            </span>
-            <span>
               <Link href="https://nextjs.org/" target="_blank">
                 <img
                   src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/nextjs.svg"
@@ -47,6 +37,16 @@ function Footer(): React.ReactElement {
                 />
               </Link>
               <span className="sr-only">NextJS</span>
+            </span>
+            <span>
+              <Link href="https://www.typescriptlang.org/" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/juandaep/Icons@master/devicons/typescript.svg"
+                  width="26"
+                  title="Typescript"
+                />
+              </Link>
+              <span className="sr-only">Typescript</span>
             </span>
             <span>
               <Link href="https://tailwindcss.com/" target="_blank">
