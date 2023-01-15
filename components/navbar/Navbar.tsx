@@ -10,7 +10,7 @@ import ThemeToggle from "./ThemeToggle";
 const Navbar = (): JSX.Element => {
   const [isScreenScrolled, setIsScreenScrolled] = useState(false)
   const addShadowNav = () => {
-    window.scrollY >= 100
+    window.scrollY >= 80
     ? setIsScreenScrolled(true)
     : setIsScreenScrolled(false)
   }
