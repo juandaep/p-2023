@@ -24,9 +24,9 @@ const Navbar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed z-30 min-w-full px-4 sm:px-6 md:px-8 xl:px-0 right-0 left-0 ${isScreenScrolled && "shadow-lg bg-white/40 backdrop-blur dark:bg-[#121212]/40"}`}
+      className={`fixed z-30 min-w-full px-4 sm:px-6 md:px-8 xl:px-0 right-0 left-0 ${isScreenScrolled && "shadow-lg bg-white backdrop-blur dark:bg-[#121212]"}`}
     >
-      <nav className="flex items-center justify-between py-8 mx-auto max-w-7xl">
+      <nav className="flex items-center justify-between py-4 md:py-6 mx-auto max-w-7xl">
         <Logo />
         <div
           className={classNames(
