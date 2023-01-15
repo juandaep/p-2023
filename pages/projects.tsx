@@ -1,8 +1,39 @@
 import { SEOPage } from "@/components/SEO";
+import TabCoding from "@/components/Tabs/TabCoding";
+import TabDesign from "@/components/Tabs/TabDesign";
+import TabMixing from "@/components/Tabs/TabMixing";
+import Tabs from "@/components/Tabs/Tabs";
 import siteMetadata from "@/data/siteMetadata";
+import { useState } from "react";
 import { classNames } from "utils/classnames";
 
+type TabsType = {
+  label: string;
+  index: number;
+  Component: React.FC<{}>;
+}[];
+
+//Tabs Array
+const tabs: TabsType = [
+  {
+    label: "Design",
+    index: 1,
+    Component: TabDesign,
+  },
+  {
+    label: "Coding",
+    index: 2,
+    Component: TabCoding,
+  },
+  {
+    label: "Mixing",
+    index: 3,
+    Component: TabMixing,
+  },
+];
+
 const projects = () => {
+  const [selectedTab, setSelectedTab] = useState<number>(tabs[0].index);
   return (
     <>
       <SEOPage
@@ -27,7 +58,11 @@ const projects = () => {
           </h1>
         </div>
         <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
-          Currently this page is on development 😊
+          <Tabs
+            selectedTab={selectedTab}
+            onClick={setSelectedTab}
+            tabs={tabs}
+          />
         </div>
       </div>
     </>
