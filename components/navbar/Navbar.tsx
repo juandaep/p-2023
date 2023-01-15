@@ -1,3 +1,4 @@
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { classNames } from "utils/classnames";
 import { Logo } from "../Logo";
@@ -25,6 +26,16 @@ const Navbar = () => {
               {link.title}
             </Link>
           ))}
+          <Link
+              href="https://www.figma.com/community/file/1172091403014887161"
+              className="hover-animation py-1 flex gap-2 items-center"
+              target="_blank"
+            >
+              Design Systems
+              <span className="h-5 w-5">
+                <ArrowTopRightOnSquareIcon />
+              </span>
+            </Link>
         </div>
         <ThemeToggle />
         <MobileNav />
