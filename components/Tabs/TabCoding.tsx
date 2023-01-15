@@ -3,7 +3,7 @@ import React, { FC, Fragment } from "react";
 const TabCoding: FC<{}> = () => {
   return (
     <Fragment>
-      <div>TabCoding</div>
+      <div>This page is currently on development 😊</div>
     </Fragment>
   );
 };

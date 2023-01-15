@@ -3,7 +3,7 @@ import React, { FC, Fragment } from "react";
 const TabMixing: FC<{}> = () => {
   return (
     <Fragment>
-      <div>TabMixing</div>
+      <div>This page is currently on development 😊</div>
     </Fragment>
   );
 };
