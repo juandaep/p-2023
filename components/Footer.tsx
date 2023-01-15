@@ -9,7 +9,7 @@ function Footer(): React.ReactElement {
   return (
     <div
       className={classNames(
-        "flex flex-col items-center justify-center py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
+        "flex flex-col items-center justify-center star py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
         "dark:border-neutral-700"
       )}
     >
@@ -61,11 +61,15 @@ function Footer(): React.ReactElement {
           </div>
         </div>
         <div className="text-xs flex items-center ">
-        &copy; {year} Made with{" "}
+          &copy; {year} Made with{" "}
           <HeartIcon className="w-5 h-5 mx-1 fill-red-600 animate-pulse" />
           <a
             href="mailto:juandaesaputra@gmail.com"
-            className={classNames("text-neutral-500 font-medium transition-all", "hover:text-neutral-700", "dark:hover:text-neutral-300")}
+            className={classNames(
+              "text-neutral-500 font-medium transition-all",
+              "hover:text-neutral-700",
+              "dark:hover:text-neutral-300"
+            )}
           >
             Juanda Esa Putra.
           </a>

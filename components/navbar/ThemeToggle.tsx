@@ -1,6 +1,6 @@
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { classNames } from "utils/classnames";
 
 const ThemeToggle = () => {

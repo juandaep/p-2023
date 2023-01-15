@@ -11,7 +11,7 @@ const projects = () => {
       />
       <div
         className={classNames(
-          "fade-in divide-y-2 divide-neutral-200",
+          "divide-y-2 divide-neutral-200",
           "dark:divide-neutral-800"
         )}
       >
@@ -26,9 +26,8 @@ const projects = () => {
             Projects
           </h1>
         </div>
-        <div className="flex min-h-max flex-col justify-center px-6 py-10 md:px-10 text-2xl text-emerald-600 dark:text-emerald-500">
+        <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
           Currently this page is on development 😊
-          
         </div>
       </div>
     </>

@@ -4,7 +4,7 @@ import Document, {
   Head,
   Html,
   Main,
-  NextScript,
+  NextScript
 } from "next/document";
 
 class MyDocument extends Document {
@@ -37,10 +37,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicons/favicon-16x16.png"
           />
-          <meta
-            name="description"
-            content="Juanda Esa Putra website"
-          />
+          <meta name="description" content="Juanda Esa Putra website" />
         </Head>
         <body className="bg-white dark:bg-[#121212] antialiased">
           <Main />

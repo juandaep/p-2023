@@ -1,11 +1,17 @@
-import Image from "next/image";
-import profileLight from "../public/profile-light.png";
-import profileDark from "../public/profile-dark.png";
-
 export const ProfileImgLight = () => {
-  return <Image src={profileLight} alt="profile-light" priority />;
+  return (
+    <img
+      src="https://cdn.jsdelivr.net/gh/juandaep/p-2023@master/public/profile-light.png"
+      alt="profile-light"
+    />
+  );
 };
 
 export const ProfileImgDark = () => {
-  return <Image src={profileDark} alt="profile-dark" priority />;
+  return (
+    <img
+      src="https://cdn.jsdelivr.net/gh/juandaep/p-2023@master/public/profile-dark.png"
+      alt="profile-dark"
+    />
+  );
 };

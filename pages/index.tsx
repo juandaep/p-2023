@@ -1,6 +1,5 @@
 import { SEOPage } from "@/components/SEO";
 import siteMetadata from "@/data/siteMetadata";
-import Head from "next/head";
 import { classNames } from "utils/classnames";
 
 const Home = () => {
@@ -34,7 +33,12 @@ const Home = () => {
         >
           Juanda Esa Putra
         </h1>
-        <p className="text-xl text-neutral-400">
+        <p
+          className={classNames(
+            "text-xl text-neutral-500",
+            "dark:text-neutral-400"
+          )}
+        >
           An UI/UX Designer who love audio engineering
         </p>
       </div>

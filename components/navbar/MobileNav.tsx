@@ -1,4 +1,8 @@
-import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowTopRightOnSquareIcon,
+  Bars3BottomRightIcon,
+  XMarkIcon
+} from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useState } from "react";
 import { classNames } from "utils/classnames";
@@ -53,15 +57,31 @@ const MobileNav = () => {
         ></button>
         <nav className="fixed mt-8 w-full h-full">
           {navLinks.map((link) => (
-            <div key={link.title} className={classNames("px-12 py-4 text-2xl tracking-widest text-neutral-600", "dark:text-neutral-100")}>
-              <Link
-                href={link.href}
-                onClick={onToggleNav}
-              >
+            <div
+              key={link.title}
+              className={classNames(
+                "px-12 py-4 text-2xl tracking-widest text-neutral-800",
+                "dark:text-neutral-100"
+              )}
+            >
+              <Link href={link.href} onClick={onToggleNav}>
                 {link.title}
               </Link>
             </div>
           ))}
+          <Link
+            href="https://www.figma.com/community/file/1172091403014887161"
+            className={classNames(
+              "px-12 py-4 text-2xl tracking-widest text-neutral-800 flex gap-2 items-center",
+              "dark:text-neutral-100"
+            )}
+            target="_blank"
+          >
+            Design Systems
+            <span>
+              <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+            </span>
+          </Link>
         </nav>
       </div>
     </div>
