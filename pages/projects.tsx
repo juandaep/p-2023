@@ -58,11 +58,7 @@ const projects = () => {
           </h1>
         </div>
         <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
-          <Tabs
-            selectedTab={selectedTab}
-            onClick={setSelectedTab}
-            tabs={tabs}
-          />
+          Currently this page is on development 😊
         </div>
       </div>
     </>
