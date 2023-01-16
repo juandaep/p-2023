@@ -13,7 +13,7 @@ function SectionContainer({ children }: Props) {
   return (
     <div className={`${epilogue.className}`}>
       <Navbar />
-      <div className={classNames("mx-auto max-w-7xl px-4 pt-32 flex flex-col min-h-screen", "sm:px-6 md:px-8 xl:px-0")}>
+      <div className={classNames("mx-auto max-w-7xl px-4 pt-[5.5rem] flex flex-col min-h-screen", "sm:px-6 md:px-8 xl:px-0 md:pt-[6.6rem]")}>
         {children}
       <Footer />
       </div>
