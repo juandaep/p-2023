@@ -10,7 +10,7 @@ import ThemeToggle from "./ThemeToggle";
 const Navbar = (): JSX.Element => {
   const [isScreenScrolled, setIsScreenScrolled] = useState(false)
   const addShadowNav = () => {
-    window.scrollY >= 80
+    window.scrollY >= 20
     ? setIsScreenScrolled(true)
     : setIsScreenScrolled(false)
   }
@@ -24,7 +24,7 @@ const Navbar = (): JSX.Element => {
 
   return (
     <div
-      className={`fixed z-30 min-w-full px-4 sm:px-6 md:px-8 xl:px-0 right-0 left-0 ${isScreenScrolled && "shadow-lg bg-white backdrop-blur dark:bg-[#121212]"}`}
+      className={`fixed z-30 min-w-full px-4 sm:px-6 md:px-8 xl:px-0 right-0 left-0 ${isScreenScrolled && "shadow bg-white dark:bg-[#121212]"}`}
     >
       <nav className="flex items-center justify-between py-4 md:py-6 mx-auto max-w-7xl">
         <Logo />

@@ -50,7 +50,7 @@ const projects = () => {
           <h1
             className={classNames(
               "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
-              "sm:text-4xl sm:leading-10 md:text-6xl md:leading-14",
+              "md:text-5xl md:leading-14",
               "dark:text-neutral-100"
             )}
           >

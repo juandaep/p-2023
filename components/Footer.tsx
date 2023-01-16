@@ -9,7 +9,7 @@ function Footer(): React.ReactElement {
   return (
     <div
       className={classNames(
-        "flex flex-col items-center justify-center star py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
+        "flex flex-col items-center justify-center py-6 px-2 gap-2 border-t border-neutral-300 text-neutral-500",
         "dark:border-neutral-700"
       )}
     >

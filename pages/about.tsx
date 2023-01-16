@@ -28,17 +28,22 @@ const About = () => {
         <h1
           className={classNames(
             "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
-            "md:text-6xl md:leading-14",
+            "md:text-5xl md:leading-14",
             "dark:text-white"
           )}
         >
           About
         </h1>
       </div>
-      <div className={classNames("flex flex-col justify-between", "md:h-full")}>
+      <div
+        className={classNames(
+          "flex flex-col justify-between",
+          "md:min-h-[38.563rem]"
+        )}
+      >
         <div
           className={classNames(
-            "items-start py-8 space-y-6",
+            "py-8 space-y-6",
             "md:grid md:grid-cols-2 md:gap-x-8 md:space-y-0"
           )}
         >

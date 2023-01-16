@@ -35,8 +35,9 @@ const Home = () => {
         </h1>
         <p
           className={classNames(
-            "text-xl text-neutral-500",
-            "dark:text-neutral-400"
+            "text-lg text-neutral-500",
+            "dark:text-neutral-400",
+            "md:text-xl"
           )}
         >
           An UI/UX Designer who love audio engineering
