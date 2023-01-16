@@ -42,7 +42,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-20 right-0 z-10 h-full w-full transform bg-white duration-300 ease-in-out dark:bg-[#121212] ${
+        className={`fixed top-20 right-0 z-10 min-h-screen w-full transform bg-white duration-300 ease-in-out dark:bg-[#121212] ${
           navShow ? "translate-x-0" : "translate-x-full"
         }`}
       >
