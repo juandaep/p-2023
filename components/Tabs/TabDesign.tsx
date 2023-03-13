@@ -1,5 +1,5 @@
 import { FC, Fragment } from "react";
-import Card from "../Card";
+import { Card } from "../Card";
 
 const TabDesign: FC<{}> = () => {
   return (
