@@ -30,7 +30,7 @@ const Card: FC<CardProps> = ({
         <img className="w-auto rounded-lg shadow-xl" src={img} />
       </div>
       <div
-        className={classNames("flex flex-col flex-auto p-2")}
+        className={classNames("flex flex-col flex-auto p-4", "md:p-6")}
       >
         <h4
           className={classNames(
@@ -73,14 +73,14 @@ const MixingCard: FC<CardMixingProps> = ({ url, title, description }) => {
   return (
     <div
       className={classNames(
-        "flex flex-col rounded-lg bg-white shadow-md border box-border border-neutral-200 mb-6",
-        "dark:bg-neutral-800 dark:border dark:box-border dark:border-neutral-600"
+        "flex flex-col min-w-0 max-w-md rounded-lg bg-white shadow-md border box-border border-neutral-200 mb-6",
+        "dark:bg-neutral-800 dark:border dark:box-border dark:border-neutral-600", "md:max-w-2xl"
       )}
     >
       <div className={classNames("flex flex-col gap-4 p-4 py-4")}>
         <ReactPlayer url={url} width="100%" height="100%" />
         <div
-          className={classNames("flex flex-col flex-auto gap-1", "md:p-6")}
+          className="flex flex-col gap-1"
         >
           <h4
             className={classNames(
