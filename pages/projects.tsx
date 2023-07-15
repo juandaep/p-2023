@@ -42,28 +42,23 @@ const projects = () => {
       />
       <div
         className={classNames(
-          "divide-y-2 divide-neutral-200",
-          "dark:divide-neutral-800"
+          "pt-4 pb-6 border-b border-neutral-300",
+          "md:pt-6 pb-6",
+          "dark:border-neutral-700"
         )}
       >
-        <div className={classNames("space-y-2 pt-6 pb-8", "md:space-y-5")}>
-          <h1
-            className={classNames(
-              "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
-              "md:text-5xl md:leading-14",
-              "dark:text-neutral-100"
-            )}
-          >
-            Projects
-          </h1>
-        </div>
-        <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
-          <Tabs
-            selectedTab={selectedTab}
-            onClick={setSelectedTab}
-            tabs={tabs}
-          />
-        </div>
+        <h1
+          className={classNames(
+            "text-3xl font-medium leading-9 tracking-tight text-neutral-900",
+            "md:text-5xl md:leading-14",
+            "dark:text-neutral-100"
+          )}
+        >
+          Projects
+        </h1>
+      </div>
+      <div className={classNames("py-8 space-y-6 flex flex-col gap-8", "")}>
+        <Tabs selectedTab={selectedTab} onClick={setSelectedTab} tabs={tabs} />
       </div>
     </>
   );
